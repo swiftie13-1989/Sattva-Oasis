@@ -1,1 +1,1 @@
-# yogaproject
+# Sattva Oasis: Traquil Essence

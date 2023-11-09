@@ -1,0 +1,245 @@
+<html>
+
+<head>
+    <title>Sattva Oasis</title>
+    <link rel="stylesheet"href="Style - 2.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Elsie">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <style>
+    
+    .active,
+    .dot:hover {
+      background-color: #98af8a;
+    }
+             
+             .chart-container {
+            position: relative;
+            width: 150px;
+            height: 150px;
+        }
+
+        .pie-chart {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: relative;
+            background-color: transparent;
+            border: 5px solid #fff;
+            transform: rotate(-90deg);
+        }
+
+        .slice {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            clip: rect(0, 50px, 100px, 0);
+            border-radius: 50%;
+        }
+
+        .sattva {
+            background-color: #4CAF50;
+            transform: rotate(360deg);
+        }
+
+        .rajas {
+            background-color: #FFC107;
+            transform: rotate(90deg);
+        }
+
+        .tamas {
+            background-color: #F44336;
+            transform: rotate(180deg);
+        }
+
+        .label {
+            position: absolute;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .label-sattva {
+            top: 63px;
+            left: 12px;
+            transform: rotate(90deg);
+            font-size:9px;
+        }
+
+        .label-rajas {
+            top: 63px;
+            left: 12px;
+            font-size:9px;
+        }
+
+        .label-tamas {
+            top: 40px;
+            left: 10px;
+            transform: rotate(270deg);
+            font-size:9px;
+        }
+
+        .text-bubble {
+            color: black;
+            background-color: blanchedalmond;
+            border-radius: 10px;
+            position:sticky;
+            font-size: 8px;
+
+           
+        }
+.mySlides {display:none;}
+
+h1 {text-align: center;}
+</style>
+</head>
+<body>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about-us">About Us</a></li>
+        <li><a href="The Spectrum copy.HTML" class="active">The Spectrum</a></li>
+        <li><a href="Eating Philosophy.html">Eating Philosophy</a></li>
+        <li><a href="Yoga.HTML">Yoga</a></li>
+        <li><a href="Mindful Living.HTML">Mindful Living</a></li>
+        <li><a href="Conscious Earth.html">Conscious Earth</a></li>
+        <li><a href="goal.html">Goal Setting</a></li>
+        <li><a href="FAQ.html">Frequently Asked Questions</a></li>
+        <li><a href="#contactus">Contact Us</a></li>
+    
+    
+      </ul>
+    
+        <br><br>
+
+    <h1 id="headergunas">The Three Gunas of Nature</h1>
+    <p id="gunas">The three gunas, Sattva, Rajas, and Tamas, are fundamental qualities or attributes that play a central role in Indian philosophy, particularly in Hinduism and Ayurveda. They are used to describe and understand the inherent qualities of the physical and mental world, as well as the influence they have on human behaviour and spiritual evolution.</p>
+    <center>
+        <div class="chart-container">
+            <div class="pie-chart">
+                <div class="slice sattva" id="sattva">
+                    <div class="label label-sattva">Sattva</div>
+                </div>
+                <div class="slice rajas" id="rajas">
+                    <div class="label label-rajas">Rajas</div>
+                </div>
+                <div class="slice tamas" id="tamas">
+                    <div class="label label-tamas">Tamas</div>
+                </div>
+            </div>
+            <div class="text-bubble" id="text-bubble"></div>
+        </div>
+    
+        <script>
+            const textBubble = document.getElementById('text-bubble');
+            const sattvaSlice = document.getElementById('sattva');
+            const rajasSlice = document.getElementById('rajas');
+            const tamasSlice = document.getElementById('tamas');
+    
+            function showBubble(text, x, y) {
+                textBubble.style.display = 'block';
+                textBubble.innerText = text;
+                textBubble.style.left = x + 'px';
+                textBubble.style.top = y + 'px';
+            }
+    
+            function hideBubble() {
+                textBubble.style.display = 'none';
+            }
+    
+            sattvaSlice.addEventListener('click', (event) => {
+                const rect = sattvaSlice.getBoundingClientRect();
+                showBubble("Sattva: Sattva is a state of harmony, balance, joy, and intelligence. Sattva is the guna that yogis achieve towards as it reduces rajas and tamas and thus makes liberation possible. Other sattvic qualities are delight, happiness, peace, wellness, freedom, love, compassion, equanimity, empathy, friendliness, focus, self-control, satisfaction, trust, fulfillment, calmness, bliss, cheerfulness, gratitude, fearlessness, selflessness.", rect.left, rect.top);
+            });
+    
+            rajasSlice.addEventListener('click', (event) => {
+                const rect = rajasSlice.getBoundingClientRect();
+                showBubble("Rajas: Rajas is a state of energy, action, change, and movement. The nature of rajas is of attraction, longing and attachment and rajas strongly bind us to the fruits of our work. Other rajasic qualities are anger, euphoria, anxiety, fear, irritation, worry, restlessness, stress, courage, rumination, determination, chaos.", rect.left, rect.top);
+            });
+    
+            tamasSlice.addEventListener('click', (event) => {
+                const rect = tamasSlice.getBoundingClientRect();
+                showBubble("Tamas: Tamas is a state of darkness, inertia, inactivity, and materiality. Tamas manifests from ignorance and deludes all beings from their spiritual truths. Other tamasic qualities are laziness, disgust, attachment, depression, helplessness, doubt, guilt, shame, boredom, addiction, hurt, sadness, apathy, confusion, grief, dependency, ignorance.", rect.left, rect.top);
+            });
+    
+            // Hide the bubble when clicking outside the pie chart
+            document.addEventListener('click', (event) => {
+                if (!sattvaSlice.contains(event.target) && !rajasSlice.contains(event.target) && !tamasSlice.contains(event.target)) {
+                    hideBubble();
+                }
+            });
+        </script>
+        </center>
+<br><br><br><br>
+    <h1 id="historyhead">History</h1>
+    <p id="history">The concept of "Sattva" did not come into being as a separate entity or concept; rather, it is an inherent part of ancient Indian philosophy and religious thought. Sattva, along with the other two gunas, Rajas and Tamas, is a fundamental aspect of how these philosophies understand the qualities and energies that influence the world and human behaviour. The concept of the three gunas is integral to various ancient Indian texts, and it has been part of the philosophical and spiritual landscape for centuries.
+        The idea of the gunas, including Sattva, can be traced back to ancient Indian scriptures and philosophical traditions, such as:<br><br>
+        <b>Vedas:</b> The earliest Vedic texts, such as the Rigveda, contain references to the interplay of these qualities, although they may not be explicitly referred to as "gunas." They describe the balance and harmony in the cosmos as well as the importance of understanding and aligning oneself with these qualities for spiritual realization.<br><br>
+        <b>Upanishads:</b> The Upanishads, which are a part of the Vedas, delve deeper into the philosophical aspects of the gunas, emphasizing their role in understanding the nature of reality and the self.<br><br>
+        <b>Bhagavad Gita:</b> The Bhagavad Gita, a key Hindu scripture that is part of the Mahabharata, provides a systematic explanation of the gunas, including Sattva, and their influence on human behaviour and spiritual growth. In the Gita, Lord Krishna imparts wisdom to Arjuna, addressing the concept of Sattva as a means to attain spiritual enlightenment.<br><br>
+        <b>Ayurveda:</b> The Ayurvedic system of medicine, dating back thousands of years, incorporates the understanding of the gunas, including Sattva, as a means of assessing an individual's physical and mental constitution and recommending treatments and lifestyle choices for balance and well-being.<br><br>
+        Sattva is not a concept that came into being at a specific point in history; it is an ancient and foundational aspect of Indian philosophy and spirituality. It has been discussed, refined, and elaborated upon in various ancient texts and traditions, contributing to the comprehensive understanding of human nature and the universe in the context of these philosophies.</p>
+    
+        <h1 id="whathead">What is a Sattvic Lifestyle?</h1>
+    <p id="what">Sattvic lifestyle is a comprehensive way of living that revolves around the core principles of purity, balance, and simplicity. It encompasses a range of practices and habits that harmonize the physical, mental, and spiritual aspects of an individual's life. Central to this lifestyle is a dietary approach that prioritizes fresh, unprocessed, and predominantly vegetarian or vegan foods. Such a diet is believed to contribute to physical vitality, mental clarity, and emotional equilibrium.<br><br>
+        In addition to dietary choices, a Sattvic lifestyle places great importance on mental and emotional well-being. This is achieved through practices like meditation and mindfulness, which promote self-awareness, tranquility, and a deep sense of inner peace. These practices are instrumental in maintaining mental clarity and emotional balance, allowing individuals to navigate life's challenges with equanimity.<br><br>
+        Physical well-being is another facet of Sattva, and this lifestyle encourages the regular practice of yoga and gentle exercise. These physical activities not only promote physical health but also contribute to mental and spiritual balance, further aligning with the principles of Sattva.<br><br>
+        Simplicity and moderation are pervasive themes within a Sattvic lifestyle. It extends beyond diet to encompass all aspects of life. Individuals are encouraged to embrace a straightforward and uncluttered way of living, eschewing excesses or extremes that may disrupt the equilibrium of the mind and body.<br><br>
+        A distinguishing feature of a Sattvic lifestyle is its emphasis on compassion and kindness. Practitioners are encouraged to extend empathy and selfless service to others, fostering a sense of interconnectedness and harmony with the world around them.<br><br>
+        Lastly, a Sattvic lifestyle promotes cultural and artistic engagement as a means of cultivating beauty and spirituality. Participation in artistic pursuits, such as music, dance, and visual arts, is seen as a way to connect with the sublime and transcendental aspects of life, thus reinforcing the principles of Sattva.<br><br></p>
+
+        <h1 id="benefitshead">General Benefits</h1>
+    <p id="benefits">A Sattvic lifestyle can benefit individuals from various walks of life, including students, businesspeople, doctors, and others. Here's how different people may benefit from adopting elements of this lifestyle:<br><br>
+        <b>Students:</b><br>
+        <u>Improved Concentration:</u> The emphasis on a Sattvic diet, mindfulness, and meditation can enhance a student's ability to concentrate and focus on their studies.<br>
+       <u>Emotional Balance:</u> Sattvic practices can help manage the stress and emotional challenges often associated with academic life.<br>
+        <u>Better Memory:</u> A Sattvic lifestyle can contribute to improved memory retention, which is essential for learning and exams.<br><br>
+        
+        <b>Businesspeople:</b><br>
+        <u>Enhanced Decision-Making:</u> Mental clarity and emotional balance resulting from a Sattvic lifestyle can lead to better decision-making and problem-solving skills.<br>
+        <u>Reduced Stress:</u> Practices like meditation can help reduce stress and increase resilience in the face of workplace challenges.<br>
+        <u>Improved Relationships:</u> Compassion and kindness promoted by Sattva can lead to better interpersonal relationships, which are essential in business.<br><br>
+
+        <b>Doctors and Healthcare Professionals:</b><br>
+        <u>Personal Well-Being:</u> A Sattvic lifestyle can contribute to the personal well-being and overall health of doctors and healthcare professionals, reducing the risk of burnout.<br>
+        <u>Empathy and Compassion:</u> Sattvic practices can help healthcare providers maintain a strong sense of empathy and compassion for their patients.<br>
+        <u>Patient Outcomes:</u> A balanced and healthy lifestyle can positively influence the doctor-patient relationship and potentially lead to better patient outcomes.<br><br>
+
+        <b>Parents:</b><br>
+        <u>Positive Parenting:</u> A Sattvic lifestyle can help parents manage the demands of raising children with patience, love, and kindness.<br>
+        <u>Role Modeling:</u> Parents who follow a Sattvic lifestyle can serve as positive role models for their children, instilling in them the values of simplicity and compassion.<br>
+        <u>Family Harmony:</u> Sattvic practices can contribute to a harmonious family environment with reduced stress and improved communication.<br><br>
+
+        <b>Artists and Creatives:</b><br>
+        <u>Enhanced Inspiration:</u> A Sattvic lifestyle, with its focus on artistic and cultural engagement, can enhance the inspiration and creativity of artists and creative individuals.<br>
+        <u>Emotional Expressiveness:</u> Emotional balance and inner peace can aid artists in channeling their emotions into their creative works.<br>
+        <u>Spiritual Connection:</u> Engaging in artistic pursuits aligned with Sattva can deepen the spiritual and transcendent dimensions of creative expression.<br><br>
+
+        In summary, a Sattvic lifestyle offers a framework for individuals in various professions and life roles to attain physical and mental well-being, enhance their effectiveness, reduce stress, and cultivate positive qualities such as compassion and kindness. While the specific benefits may vary, the overall aim is to live in harmony with oneself and the world.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </p>
+</body>
+</html>
+
+
+
+
+    

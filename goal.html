@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Goal Settings</title>
+    <link rel="stylesheet"href="Style - 2.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Elsie">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        .goal-input {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .log-entry {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .log-checkbox {
+            margin-top: 5px;
+        }
+        .log-checkbox-label {
+            font-weight: 400;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        h2 {
+            margin-top: 20px;
+            color: #333;
+        }
+        label {
+            font-weight: 600;
+            color: #555;
+        }
+        select, input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .log-button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .log-button:hover {
+            background-color: #0056b3;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#aboutus">About Us</a></li>
+        <li><a href="The Spectrum copy.HTML">The Spectrum</a></li>
+        <li><a href="Eating Philosophy.html">Eating Philosophy</a></li>
+        <li><a href="Yoga.HTML">Yoga</a></li>
+        <li><a href="Mindful Living.HTML">Mindful Living</a></li>
+        <li><a href="Conscious Earth.html">Conscious Earth</a></li>
+        <li><a href="goal.html" class="active">Goal Setting</a></li>
+        <li><a href="#contactus">Contact Us</a></li>
+    
+    
+      </ul>
+    <div class="container">
+        <h1>Goal Settings</h1>
+
+        <!-- Food Habit Goal -->
+        <label for="foodGoal">Food Habit Goal:</label>
+        <input type="text" id="foodGoal" class="goal-input" placeholder="Set your food habit goal">
+        <label for="foodTimeline">Timeline (in days):</label>
+        <input type="number" id="foodTimeline" class="goal-input">
+        <input type="checkbox" id="foodCompleted" class="log-checkbox">
+        <label for="foodCompleted" class="log-checkbox">Completed</label>
+<br><br>
+        <!-- Physical Activity Goal -->
+        <label for="activityGoal">Physical Activity Goal:</label>
+        <input type="text" id="activityGoal" class="goal-input" placeholder="Set your physical activity goal">
+        <label for="activityTimeline">Timeline (in days):</label>
+        <input type="number" id="activityTimeline" class="goal-input">
+        <input type="checkbox" id="foodCompleted" class="log-checkbox">
+        <label for="foodCompleted" class="log-checkbox">Completed</label>
+<br><br>
+        <!-- Environment Goal -->
+        <label for="environmentGoal">Environment Goal:</label>
+        <input type text="text" id="environmentGoal" class="goal-input" placeholder="Set your environment goal">
+        <label for="environmentTimeline">Timeline (in days):</label>
+        <input type="number" id="environmentTimeline" class="goal-input">
+        <input type="checkbox" id="foodCompleted" class="log-checkbox">
+        <label for="foodCompleted" class="log-checkbox">Completed</label>
+<br><br>
+        <h2>Tracking Log</h2>
+
+        <label for="logCategory">Category:</label>
+        <select id="logCategory" class="log-entry">
+            <option value="food">Food</option>
+            <option value="activity">Physical Activity</option>
+            <option value="environment">Environment</option>
+        </select>
+
+        <label for="logEntry">Entry:</label>
+        <input type="text" id="logEntry" class="log-entry">
+
+        <button onclick="addLogEntry()">Add Entry</button>
+
+        <ul id="logList"></ul>
+    </div>
+
+    <script>
+        function addLogEntry() {
+            const logCategory = document.getElementById("logCategory").value;
+            const logEntry = document.getElementById("logEntry").value;
+
+            if (logEntry.trim() !== "") {
+                const logList = document.getElementById("logList");
+                const listItem = document.createElement("li");
+                listItem.textContent = `${logCategory}: ${logEntry}`;
+                logList.appendChild(listItem);
+                document.getElementById("logEntry").value = "";
+            }
+        }
+    </script>
+</body>
+</html>

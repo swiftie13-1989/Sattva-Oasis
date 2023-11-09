@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sattva Oasis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Style - 2.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Elsie">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <style>
+
+        /* Style for the container */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Style for each section */
+        .section {
+            flex: 1;
+            padding: 20px;
+     
+            text-align: center;
+        }
+
+        /* Style for the image */
+        .section img {
+            max-width: 100%;
+            height: auto;
+        }
+        #navigationbar
+{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden; 
+}
+#nav{
+    float: left;
+    border-right: 1px solid black;
+    font-family: "Montserrat", sans-serif;
+}
+#nav a{
+    display: block;
+    color: rgb(20, 104, 41);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+#nav a:hover:not(.active){
+    background-color: rgb(221, 202, 202);
+}
+.active{
+    background-color: rgb(100, 223, 127);
+}
+
+body,html {
+    height: 100%;
+}
+
+#eat {text-align: left;}
+
+#noteat {text-align: left;}
+
+table,tr,td,th
+            {border: 1px solid rgb(26, 64, 29);
+                border-collapse: collapse;
+                padding:5px;}
+            th
+            {background-color: rgb(67, 204, 127);}
+
+
+* {box-sizing: border-box;}
+
+/* Create a two-column layout */
+.column {float: left;width: 50%;padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin:20px;
+   }
+   .flipCard {
+      background-color: transparent;
+      width: 700px;
+      height: 470px;
+      perspective: 1000px;
+   }
+   .innerCard {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+   }
+   .flipCard:hover .innerCard {
+      transform: rotateY(180deg);
+   }
+   .frontCard, .cardBack {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+   }
+   .frontCard {
+      background-color: rgb(80, 113, 70);
+      color: black;
+   }
+   .cardBack {
+      background-color: darkseagreen;
+      color: rgb(0, 0, 0);
+      transform: rotateY(180deg);
+      font-size: 16px;
+   }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#aboutus">About Us</a></li>
+        <li><a href="The Spectrum copy.HTML">The Spectrum</a></li>
+        <li><a href="Eating Philosophy.html" class="active">Eating Philosophy</a></li>
+        <li><a href="Yoga.HTML">Yoga</a></li>
+        <li><a href="Mindful Living.HTML">Mindful Living</a></li>
+        <li><a href="Conscious Earth.html">Conscious Earth</a></li>
+        <li><a href="#Goal Setting">Goal Setting</a></li>
+        <li><a href="FAQ.html">Frequently Asked Questions</a></li>
+        <li><a href="#contactus">Contact Us</a></li>
+    
+    
+      </ul>
+    <center>
+<br><br><br>
+
+
+    <h2 id="ephead">Eating Philosophy</h2>
+    <p id="ep"> The eating philosophy within a Sattvic lifestyle revolves around the principle that food profoundly impacts the mind, body, and spirit. It centers on the consumption of fresh, natural, and unprocessed foods, such as fruits, vegetables, whole grains, nuts, seeds, and dairy products, with an emphasis on vegetarian or vegan options. Sattvic meals are prepared with simplicity and purity, avoiding excessive cooking or seasoning. Moderation and mindful eating are encouraged to prevent overindulgence, as overeating can disrupt the harmony of the mind and body. Sattvic foods are believed to be rich in prana, the life force, which is thought to contribute to vitality and heightened consciousness. This dietary philosophy is not only about physical nourishment but also about nurturing the mind and spirit, ultimately promoting inner peace and spiritual growth.</p>
+    
+</center>
+    <div class="container">
+        <div class="section">
+            <img id="yeseat" src="https://www.dietburrp.com/wp-content/uploads/WhatsApp-Image-2021-02-09-at-11.32.40-AM-1200x851.jpeg" alt="Healthy Food" width="250" height="250">
+            <h2 id="eatheader">Foods to Eat</h2>
+            <p id="eat">In a Sattvic diet, the emphasis is on consuming fresh, natural, and unprocessed foods that promote purity, balance, and overall well-being. Here are some of the foods commonly included in a Sattvic diet:</p>
+            <p id="eat">
+            - <u>Fresh Fruits:</u> Fruits such as apples, bananas, pears, berries, melons, and citrus fruits are considered Sattvic. They are rich in vitamins, minerals, and natural sweetness.<br>
+            - <u>Fresh Vegetables:</u> Vegetables like leafy greens, carrots, cucumbers, zucchini, and other non-starchy vegetables are a significant part of a Sattvic diet. They are nutrient-dense and easy to digest.<br>
+            - <u>Whole Grains:</u> Whole grains like brown rice, quinoa, millet, and oats are staples in a Sattvic diet. These grains provide sustained energy and are a source of complex carbohydrates.<br>
+            - <u>Nuts and Seeds:</u> Almonds, walnuts, sunflower seeds, and flaxseeds are often included. They offer healthy fats, protein, and essential nutrients.<br>
+            - <u>Dairy Products:</u> In a vegetarian Sattvic diet, dairy products like milk, ghee (clarified butter), and yogurt are commonly consumed. They are a source of calcium and essential fats.<br>
+            - <u>Legumes:</u> Some legumes, such as lentils and mung beans, are considered Sattvic. They are a source of plant-based protein and fiber.<br>
+            - <u>Herbs and Spices:</u> Mild herbs and spices like basil, mint, coriander, and fennel are used to season Sattvic dishes. Spices like cumin and turmeric are also included for their digestive benefits.<br>
+            - <u>Honey:</u> Natural, raw honey is used as a sweetener in moderation.<br>
+            - <u>Fresh Fruit Juices:</u> Freshly squeezed fruit juices, especially from fruits like oranges and pomegranates, are considered Sattvic beverages.<br>
+            - <u>Water:</u> Pure and clean water is a fundamental part of a Sattvic diet to stay well-hydrated.<br><br>
+            </p>
+            <p id="eat">It's important to note that the specific foods included in a Sattvic diet may vary among individuals and regions, and the emphasis is on choosing foods that are fresh, pure, and in their natural state. Additionally, the diet may be adjusted based on an individual's dietary preferences and any specific health considerations.</p>
+        </div>
+        <div class="section">
+            <img src="https://yogajala.com/wp-content/uploads/Tamasic-Foods-List.jpg" alt="Unhealthy Food"width="250" height="250">
+            <h2 id="noteatheader">Foods to Avoid</h2>
+            <p id="noteat">In a Sattvic diet, the focus is on avoiding foods that are believed to disturb mental and emotional balance. Here are some of the foods and substances commonly avoided in a Sattvic diet:</p>
+            <p id="noteat">
+            - <u>Meat and Fish:</u> Non-vegetarian foods, including meat and fish, are typically avoided as they are considered heavy and can be disturbing to the mind.<br>
+            - <u>Onions and Garlic:</u> These pungent vegetables are often excluded from a Sattvic diet due to their strong flavours, which are believed to stimulate the mind and increase passion (Rajas).<br>
+            - <u>Excessive Spices:</u> Spices that are overly pungent, spicy, or stimulating, such as hot peppers, are limited or avoided.<br>
+            - <u>Processed and Refined Foods:</u> Processed, artificial, and heavily refined foods, including sugary snacks and fast food, are not considered Sattvic due to their lack of natural purity.<br>
+            - <u>Alcohol and Stimulants:</u> Alcohol, caffeine, and other stimulants are generally discouraged because they can disrupt mental clarity and emotional balance.<br>
+            - <u>Overly Salty Foods:</u> Excessive salt intake is avoided, as it can lead to increased cravings and excessive thirst.<br>
+            - <u>Foods with Artificial Additives:</u> Foods containing artificial colors, preservatives, and additives are not in line with the purity and simplicity of a Sattvic diet.<br>
+            - <u>Stale or Leftover Food:</u> Sattvic eating promotes the consumption of fresh, recently prepared food, so stale or leftover food is usually avoided.<br>
+            - <u>Fried or Greasy Foods:</u> Foods prepared with excessive oil or deep-fried are considered heavy and can be difficult to digest.<br>
+            - <u>Genetically Modified Organisms (GMOs):</u> Foods that have been genetically modified are typically not considered Sattvic, as they may lack natural purity.<br><br>
+            </p>
+            <p id="noteat">It's essential to understand that the avoidance of these foods is rooted in the philosophy of maintaining mental and emotional equilibrium and fostering a sense of purity and simplicity. The specific dietary choices and restrictions may vary among individuals who follow a Sattvic lifestyle, and it's important to adapt the diet to one's own needs and beliefs.</p>
+        </div>
+    </div>
+
+    <h1 id="mealtimehead">Meal Timings</h1>
+    <p id="mealtime">In a Sattvic lifestyle, meal timings are often guided by the principles of mindful eating and providing nourishment to the body in a balanced and harmonious way. Here are some general guidelines for meal timings within a Sattvic lifestyle:<br><br>
+        <b>Early Breakfast:</b> Breakfast is typically consumed shortly after waking, ideally within a couple of hours of sunrise. This meal is considered important for providing energy and nourishment for the day ahead.<br>
+        <b>Lunch:</b> Lunch is generally the main meal of the day and is typically consumed during the peak of the daytime, around midday. It should be a balanced and wholesome meal.<br>
+        <b>Light Dinner:</b> Dinner is usually a lighter meal and is ideally eaten well before sunset, allowing the body sufficient time to digest the food before sleep. Consuming dinner at least a few hours before bedtime is advisable.<br>
+        <b>Avoiding Late-Night Snacking:</b> Late-night snacking is discouraged in a Sattvic lifestyle. The focus is on allowing the body to rest and digest food before bedtime.<br>
+        <b>Small Snacks:</b> In between main meals, small and light snacks or fruits can be consumed as needed, particularly if hunger arises.<br>
+        <b>Hydration:</b> Drinking pure water throughout the day is encouraged to stay well-hydrated. However, large quantities of water immediately before or after meals are generally avoided, as they can dilute digestive juices.<br><br>
+        It's important to note that these are general guidelines and can be adjusted to individual needs and schedules. The key principle is to eat mindfully, maintaining a sense of purity, simplicity, and balance in meal choices and timing. Additionally, some individuals may also incorporate intermittent fasting or other dietary practices based on their specific beliefs and health goals within the context of a Sattvic lifestyle.</p>
+<br>
+    <h1 id="benefitsdiethead">Benefits of the sattvic diet</h1>
+    <p id="benefitsdiet">Balancing school commitments, learning web design, content creation, and community engagement demands adept time management and adaptability.<br><br>
+        <b>Physical Health:</b><br>
+        <u>Improved Digestion:</u> Sattvic foods are often easy to digest, reducing the likelihood of digestive issues.<br>
+        <u>Enhanced Nutrient Intake:</u> The diet includes a variety of fresh, nutrient-dense foods, providing essential vitamins, minerals, and antioxidants.<br>
+        <u>Weight Management:</u> Sattvic eating encourages mindful portion control and the consumption of wholesome, less calorie-dense foods, which can support healthy weight management.<br><br>
+        
+        <b>Mental Clarity and Emotional Balance:</b><br>
+        <u>Calmer Mind:</u> A Sattvic diet is believed to promote a sense of calm and tranquility, reducing mental agitation.<br>
+        <u>Emotional Stability:</u> Practitioners often experience increased emotional balance and reduced mood swings.<br>
+        <u>Enhanced Focus:</u> Improved mental clarity and concentration are common benefits.<br><br>
+        
+        <b>Spiritual Growth:</b><br>
+        <u>Deepened Spirituality:</u> Sattvic eating aligns with many spiritual traditions, promoting a sense of interconnectedness and inner peace.<br>
+        <u>Meditative Readiness:</u> A balanced, Sattvic mind is considered more conducive to meditative practices and self-realization.<br>
+        <u>Subtle Energy Flow:</u> The diet is believed to promote the flow of subtle energy within the body, supporting spiritual development.<br><br>
+        
+        <b>Improved Sleep:</b><br>
+        <u>Better Sleep Quality:</u> Consuming a lighter, easily digestible dinner at least a few hours before bedtime may lead to improved sleep quality.<br><br>
+        
+        <b>Resilience to Stress:</b><br>
+        <u>Stress Reduction: </u> Sattvic practices can reduce stress levels and enhance one's ability to cope with life's challenges.<br><br>
+        
+        <b>Enhanced Intuition:</b><br>
+        <u>Heightened Intuition:</u> Some individuals report heightened intuition and a deeper sense of connection to their inner wisdom.<br><br>
+        
+        <b>Environmental and Ethical Considerations:</b><br>
+        <u>Sustainability:</u> Sattvic diets often emphasize the consumption of locally sourced and seasonal foods, which aligns with sustainable and eco-friendly principles.<br>
+        <u>Compassion:</u> A Sattvic lifestyle promotes kindness and compassion toward all living beings, which can extend to ethical and humane treatment of animals.<br><br>
+        It's important to note that the benefits of a Sattvic diet may vary among individuals, and not everyone may experience the same effects. Additionally, the practice of Sattvic eating is often integrated with other aspects of a Sattvic lifestyle, including meditation, mindfulness, and physical activity, which can further enhance the overall well-being and spiritual growth of individuals who choose to follow this philosophy.</p>
+
+        <br>
+
+    <h1 id="mealplanheader">Meal plans</h1>
+    <p id="mp1">Meal plan 01</p>
+    <table id="mp1">
+        <tr>
+            <th>Time</th>
+            <th>Meal</th>
+            <th>Amount</th>
+            <th>Alternatives/Benefits</th>
+        </tr>
+        <tr>
+            <td>Breakfast</td>
+            <td>Fresh Fruit<br> Salad</td>
+            <td>1 bowl of<br>fresh fruits</td>
+            <td>Seasonal options like papaya, <br>banana, and oranges are ideal. <br> You can add a<br> touch of lime juice<br>for a refreshing twist.</td>
+        </tr>
+        <tr>
+            <td>Mid-morning</td>
+            <td>Tender coconut<br> water</td>
+            <td>1 glass</td>
+            <td>Fresh coconut<br> water is a<br>cooling and hydrating<br> option. It's<br>widely available in India.</td>
+        </tr>
+        <tr>
+            <td>Lunch</td>
+            <td>Basmati Rice<br> with Dal (Lentils)</td>
+            <td>1 cup of cooked rice,<br>1/2 cup of dal</td>
+            <td>For variety, try brown<br> rice or different lentils<br>like moong or masoor <br>dal. Serve with a side of<br>cooked vegetables like<br> okra or spinach.</td>
+        </tr>
+        <tr>
+            <td>Afternoon snack</td>
+            <td>Mixed Nuts</td>
+            <td>A small handful of<br>mixed nuts</td>
+            <td>Almonds, cashews, <br>pistachios, and walnuts<br>are wholesome options.</td>
+        </tr>
+        <tr>
+            <td>Dinner</td>
+            <td>Vegetable Khichdi</td>
+            <td>1 cup of khichdi</td>
+            <td>Khichdi made with<br> moong dal, rice, and<br>mixed seasonal vegetables.<br> A teaspoon of<br>ghee can be added<br> for extra flavor.</td>
+        </tr>
+    </table>
+
+    <p id="mp2">Meal plan 02</p>
+    <table id="mp2">
+        <tr>
+            <th>Time</th>
+            <th>Meal</th>
+            <th>Amount</th>
+            <th>Alternatives/Benefits</th>
+        </tr>
+        <tr>
+            <td>Breakfast</td>
+            <td>Oatmeal with<br>Fresh Fruits</td>
+            <td>1 cup of rolled oats<br>with diced fruits</td>
+            <td>Choose from a<br> variety of fruits<br> available seasonally such as<br>banana, apple,<br> or pomegranate.</td>
+        </tr>
+        <tr>
+            <td>Mid-morning</td>
+            <td>Amla (Indian<br> Gooseberry)>Juice</td>
+            <td>1 glass</td>
+            <td>Fresh amla juice is rich<br>in Vitamin C and is<br>a great morning<br> refreshment.</td>
+        </tr>
+        <tr>
+            <td>Lunch</td>
+            <td>Whole Wheat<br> Chapati with<br>Sabzi</td>
+            <td>2 whole wheat<br>chapatis, 1 cup<br>of mixed vegetable sabzi.</td>
+            <td>Roti can be made<br>with alternative<br>flours like jowar or bajra. Pair with<br> different vegetable preparations<br>according to the season.</td>
+        </tr>
+        <tr>
+            <td>Afternoon snack</td>
+            <td>Yogurt with<br>Honey</td>
+            <td>1 cup of curd, drizzled with a<br>teaspoon of honey</td>
+            <td>Use fresh curd, or <br>buttermilk for a cooling<br>effect. Jaggery<br>is a traditional sweetener<br>alternative to honey.</td>
+        </tr>
+        <tr>
+            <td>Dinner</td>
+            <td>Khichdi<br>with Ghee</td>
+            <td>1 cup of khichdi</td>
+            <td>Enjoy a variation with brown<br>rice or millet for added nutrition.<br>A dollop of ghee enhances the flavor<br>and promotes digestion.</td>
+        </tr>
+    </table>
+    
+    <p id="mp3">Meal plan 03</p>
+    <table id="mp3">
+        <tr>
+            <th>Time</th>
+            <th>Meal</th>
+            <th>Amount</th>
+            <th>Alternatives/Benefits</th>
+        </tr>
+        <tr>
+            <td>Breakfast</td>
+            <td>Porridge with Nuts and Honey</td>
+            <td>1 cup of porridge topped<br>with a mix of chopped nuts and <br>a drizzle of honey</td>
+            <td>Experiment with semolina or<br>millet porridge for a<br>wholesome twist.</td>
+        </tr>
+        <tr>
+            <td>Mid-morning</td>
+            <td>Fresh Pomegranate Seeds</td>
+            <td>1 cup of pomegranate<br>seeds</td>
+            <td>Pomegranate is not only<br> delicious but also rich<br>in antioxidants.</td>
+        </tr>
+        <tr>
+            <td>Lunch</td>
+            <td>Quinoa Salad with Chickpeas</td>
+            <td>1 cup of quinoa salad</td>
+            <td>Instead of quinoa, you<br>can opt for brown rice or<br>barley for your salad.<br>Include chickpeas and a medley of<br>fresh vegetables.</td>
+        </tr>
+        <tr>
+            <td>Afternoon snack</td>
+            <td>Fresh Coconut Water</td>
+            <td>1 glass of coconut water</td>
+            <td>Along with tender coconut,<br>you can also enjoy grated coconut<br>or coconut chutney.</td>
+        </tr>
+        <tr>
+            <td>Dinner</td>
+            <td>Millet Upma</td>
+            <td>1 cup of upma</td>
+            <td>Explore different millets like<br>foxtail, barnyard, or pearl<br>millet for variation. Add<br>a medley of vegetables and mild spices.</td>
+        </tr>
+    </table>
+
+    <p id="mp4">Meal plan 04: Managing High Blood Pressure</p>
+    <table id="mp4">
+        <tr>
+            <th>Time</th>
+            <th>Meal</th>
+            <th>Amount</th>
+            <th>Alternatives/Benefits</th>
+        </tr>
+        <tr>
+            <td>Breakfast</td>
+            <td>Fresh Papaya</td>
+            <td>1 cup of papaya chunks</td>
+            <td>Seasonal melons like muskmelon<br> or oranges are excellent options<br>for a potassium-rich start.</td>
+        </tr>
+        <tr>
+            <td>Mid-morning</td>
+            <td>Cucumber and Mint Infused Water</td>
+            <td>1 glass</td>
+            <td>Stay hydrated with<br>cucumber and mint-infused water.</td>
+        </tr>
+        <tr>
+            <td>Lunch</td>
+            <td>Brown Rice with Moong Dal</td>
+            <td>1 cup of brown rice, 1/2 cup of moong dal</td>
+            <td>Opt for brown rice and moong<br>dal to keep sodium intake in check.<br>Include cooked spinach or<br>lauki (bottle gourd) as a side dish.</td>
+        </tr>
+        <tr>
+            <td>Afternoon snack</td>
+            <td>Mixed Nuts</td>
+            <td>A small handful</td>
+            <td>Almonds, walnuts, and pumpkin<br>seeds are heart-healthy choices.</td>
+        </tr>
+        <tr>
+            <td>Dinner</td>
+            <td>Vegetable Khichdi</td>
+            <td>1 cup of khichdi</td>
+            <td>Use brown rice and add<br>less salt. Include easily digestible<br>vegetables like carrots, peas,<br>and zucchini.</td>
+        </tr>
+    </table>
+<br><br>
+
+<h1 id="tipshead">Tips</h1>
+<h3 id="tip">Hover over the card below to see the other side</h3>
+<div class="flipCard">
+<div class="innerCard">
+<div class="frontCard">
+<p id="tips">Choose Fresh and Seasonal Ingredients: Sattvic food should be fresh and seasonal. Select locally sourced, organic, and pesticide-free produce whenever possible.<br><br>
+Balance Your Meals: Sattvic meals should be balanced, including carbohydrates, proteins, and fats. Focus on whole grains, legumes, fresh vegetables, and fruits.<br><br>
+Cook with Love and Mindfulness: Cook your meals with a calm and positive mindset. Avoid cooking when you are upset or stressed, as it can affect the energy of the food.<br><br>
+Use Minimal Spices: Sattvic dishes are lightly spiced. Use simple seasonings like cumin, coriander, turmeric, cardamom, and fresh herbs. Avoid strong spices like garlic and onion.<br><br>
+Choose Light and Digestible Foods: Sattvic foods are easy to digest. Opt for cooked foods over raw, and avoid heavy, fried, or overly processed dishes.<br><br>
+Stay Hydrated: Drink pure water, herbal teas, or coconut water to stay hydrated. Avoid excessive consumption of caffeine or alcohol.<br><br>
+Mindful Eating: Practice mindful eating. Eat in a calm, quiet environment. Chew your food thoroughly, savoring each bite.<br><br>
+Avoid Overeating: Follow the principle of moderation in portion sizes. Overeating is discouraged in a Sattvic diet.</p>
+</div>
+<div class="cardBack">
+<p id="tips">Regular Meal Times: Try to have meals at regular intervals. Avoid skipping meals, as this disrupts the body's natural rhythms.<br><br>
+Fasting Periods: Incorporate occasional fasting periods, especially during religious or spiritual practices. Fasting can help detoxify the body and mind.<br><br>
+Eat in a Peaceful Environment: Choose a clean and peaceful place to eat. Avoid distractions such as television, phone, or work while eating.<br><br>
+Express Gratitude: Before and after your meal, take a moment to express gratitude for the food, the hands that prepared it, and the nourishment it provides.<br><br>
+Cultivate Awareness: Develop self-awareness to understand the impact of food on your body and mind. Pay attention to how different foods make you feel.<br><br>
+Be Patient: Transitioning to a Sattvic diet and lifestyle may take time. Be patient with yourself and make gradual changes.<br><br>
+Remember that the Sattvic diet is not just about the food you eat; it's about achieving mental and spiritual purity. It's a holistic approach to nourishing your body and mind, promoting peace, and fostering a deeper connection with your inner self and the world around you.</p>
+</div>
+</div>
+</div>     
+    </body>
+</html>
